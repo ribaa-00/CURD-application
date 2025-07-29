@@ -90,8 +90,8 @@ if(isset($_POST['submit'])){
 <div class="container mt-5">
   <div class="card shadow">
     <div class="profile-header d-flex justify-content-between align-items-center">
-      <h3 class="mb-0">Welcome, <span id="profileName">John Doe</span></h3>
-      <button class="btn btn-outline-light">Logout</button>
+      <h3 class="mb-0">Welcome, <span id="profileName" class="text-uppercase"></span><u><?php echo $username?></u></h3>
+      <a href="./display.php"><button class="btn btn-outline-light">Back To All Users Data</button></a>
     </div>
 
     <div class="card-body">

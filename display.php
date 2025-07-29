@@ -43,7 +43,7 @@ include 'connection.php';
 <div class="container mt-5">
   <div class="card shadow">
     <div class="card-header bg-primary text-white">
-      <h4 class="mb-0">User Management</h4>
+      <h4 class="mb-0"><b><i>All Registered Data</i></b></h4>
     </div>
     <div class="card-body">
       <table class="table table-bordered table-hover align-middle text-center">
@@ -77,8 +77,11 @@ include 'connection.php';
             <td>'.$email.'</td>
             <td>'.$password.'</td>
             <td>
-             <a href="./profileupdate.php?updateid='.$id.'"> <button class="btn btn-sm btn-primary">Update</button> </a>
-             <a href="./profileupdate.php"> <button class="btn btn-sm btn-danger">Delete</button> </a>
+             <a href="./profileupdate.php?updateid='.$id.'"> <button 
+             class="btn btn-sm btn-primary">Update</button> </a>
+
+             <a href="./delete.php?deleteid='.$id.'"> <button 
+             class="btn btn-sm btn-danger">Delete</button> </a>
               
             </td>
           </tr>
@@ -99,25 +102,13 @@ include 'connection.php';
       </table>
     </div>
   </div>
-</div>
-
-<!-- Optional: Bootstrap Modal for View -->
-<div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="viewModalLabel">User Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Example Details -->
-        <p><strong>Name:</strong> John Doe</p>
-        <p><strong>Email:</strong> john@example.com</p>
-        <p><strong>Password:</strong> *********</p>
-      </div>
-    </div>
+  <div class="btn p-3">
+    <a href="./index.php">
+    <button class="btn btn-warning">Add Users</button>
+  </a>
   </div>
 </div>
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
